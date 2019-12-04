@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type='text/css' href='../style.css'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Praksa Tesanj</title>
+
+    </head>
+
+    <body>
+        <div id="thin-head">
+          <ul id='heading-thin'>
+            <li id="date"></li>
+            <li style="margin-left: 75%;">Svjeze: </li>
+          </ul>
+        </div>
+
+        <div id="heading">
+            <img id="grb" src="../grb.png">
+          <h1><a href="../index.html" style="color: #fabd2f">Tesanj Practice</a></h1>
+        </div>
+        <div id="menu-bar">
+          <ul>
+            <li style="margin-left:8%; margin-right:8%;"><a href="../praksa/praksa.html">Praksa</a></li>
+            <li style="margin-right:8%; margin-left: 8%;"><a href="./firma.html">Firme</a></li>
+            <li  style="margin-left:8%; margin-right: 8%;"><a href="../poslovi/poslovi.html">Posao</a></li>
+            <li style="margin-right: 8%; margin-left:8%;"><a href="../toplista/top.html">Top lista</a></li>
+        </ul>
+        </div>
+
+        <div id="selection" style="margin-top: 12%; margin-left: 5%;">
+            <select id="firme" name="critical" onchange="getText(this)">
+                <option value="--Izaberi--">Izaberi</option>
+                <option value="manhummel">Mann+Hummel</option>
+                <option value="saracevic">Saracevic</option>
+                <option value="igraj-uci-rasti">Igraj, uci, rasti</option>
+                <option value="tra">TRA</option>
+                <option value="jp">JP Rad Tesanj</option>
+
+            </select>
+        <div id="textDiv"> </div>
+    </div>
+    <footer>
+        <img src='igrajucirasti.png' style="margin-left: 10%; margin-right: 10%;">
+        <img src='jprad.jpeg' style="margin-right: 10%;">
+        <img src='logo1.png' style="margin-right: 10%;">
+        <img src="manhummel.jpeg" style="margin-right: 10%;">
+        <img src="tra.png">
+    </footer>
+        <script src="../date.js"></script>
+        <script>
+                var DivTxt = new Array()
+                DivTxt[0] = "Odaberite firmu"
+                DivTxt[1] = "Mann+Hummel"
+                DivTxt[2] = "Saracevic"
+                DivTxt[3] = "Igraj, uci, rasti"
+                DivTxt[4] = "TRA Tesanj"
+                DivTxt[5] = "JP Rad Tesanj"
+                
+                function getText(slction){
+                txtSelected = slction.selectedIndex;
+                document.getElementById('textDiv').innerHTML = DivTxt[txtSelected];
+                }
+                </script>
+    </body>
+</html>
